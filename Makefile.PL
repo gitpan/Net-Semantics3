@@ -18,7 +18,6 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PREREQ_PM => {
-        'DateTime'              => 0,
         'Moose'                 => '2.0602',
         'methods'               => 0,
         'LWP::UserAgent'        => 0,

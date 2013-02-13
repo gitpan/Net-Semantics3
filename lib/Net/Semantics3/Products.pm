@@ -1,5 +1,4 @@
 package Net::Semantics3::Products;
-use lib('/home/varun/cpan-test/Net-Semantics3/lib');
 
 use Moose;
 use methods;
@@ -145,7 +144,7 @@ Query the products endpoint by building up the query parameters.
     $sem3->products_field( 'cat_id', 4992 );
     $sem3->products_field( 'brand', 'Toshiba' );
     $sem3->products_field( 'weight', 'gte', 1000000 );
-    $sem3->products_field( ;weight', 'lt', 1500000 );
+    $sem3->products_field( 'weight', 'lt', 1500000 );
 
 =head3 get_products( )
 
@@ -414,7 +413,7 @@ Common: {
             );  
         }
 
-        print STDERR Dumper( $self->data_query->{ $endpoint } );
+        #print STDERR Dumper( $self->data_query->{ $endpoint } );
 
         if( !defined( $data ) ) {
             $self->query_result( $self->_get( $endpoint, encode_json( $self->data_query->{ $endpoint } ) ) );
